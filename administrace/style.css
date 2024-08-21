@@ -1,0 +1,28 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: rebeccapurple;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+textarea {
+    height: 600px;
+}
+
+button,
+input[type='submit'] {
+    background: cadetblue;
+    color: white;
+    padding: 0.5em 2em;
+}
+button:hover,
+input[type='submit']:hover {
+    opacity: 0.8;
+}

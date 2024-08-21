@@ -1,0 +1,11 @@
+{
+    "name": "ice-braker",
+    "version": "1.0.0",
+    "scripts": {
+        "bs": "browser-sync start --server --config ./bsconfig.js"
+    },
+    "keywords": [],
+    "author": "Michal Gerz",
+    "license": "ISC",
+    "description": ""
+}
