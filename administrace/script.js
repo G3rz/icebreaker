@@ -3,7 +3,12 @@ import { g3__ } from '../debug.js';
 // Import the necessary Firebase modules
 import firebaseConfig from '../firebaseConfig.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js';
-import { getDatabase, ref, set, get } from 'https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js';
+import {
+    getDatabase,
+    ref,
+    set,
+    get,
+} from 'https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js';
 import {
     getAuth,
     signInWithEmailAndPassword,
@@ -61,7 +66,7 @@ document.getElementById('edit').addEventListener('submit', (event) => {
             // Save the array to Firebase
             set(ref(database, 'questionsArray'), arrayData)
                 .then(() => {
-                    g3__.log('Array saved successfully.');
+                    alert('Array saved successfully.');
                 })
                 .catch((error) => {
                     g3__.error('Error saving array:', error);
@@ -88,7 +93,8 @@ onAuthStateChanged(auth, (user) => {
             .then((snapshot) => {
                 if (snapshot.exists()) {
                     const questionsArray = snapshot.val();
-                    document.getElementById('questionTextarea').value = JSON.stringify(questionsArray, null, 2);
+                    document.getElementById('questionTextarea').value =
+                        JSON.stringify(questionsArray, null, 2);
                 } else {
                     g3__.log('No data available');
                 }
