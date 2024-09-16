@@ -28,7 +28,8 @@ h1 {
     font-weight: 400;
     font-family: 'Open Sans', Arial;
     color: var(--primary);
-    -webkit-text-stroke: 1.5px oklch(from var(--primary) calc(l - 0.5) calc(c - 0.2) h);
+    -webkit-text-stroke: 1.5px
+        oklch(from var(--primary) calc(l - 0.5) calc(c - 0.2) h);
     text-transform: uppercase;
 }
 
@@ -46,7 +47,8 @@ p {
 
 small {
     color: oklch(from var(--secondary) calc(l + 0.1) c calc(h + 35));
-    -webkit-text-stroke: 1px oklch(from var(--secondary) calc(l - 0.2) calc(c - 0.2) calc(h + 35));
+    -webkit-text-stroke: 1px
+        oklch(from var(--secondary) calc(l - 0.2) calc(c - 0.2) calc(h + 35));
     font-size: 0.6em;
     display: inline-block;
     vertical-align: top;
@@ -60,7 +62,9 @@ small {
 }
 svg {
     width: clamp(100px, 30vw, 150px);
-    filter: drop-shadow(3px 3px oklch(from var(--primary) calc(l - 0.4) calc(c - 0.2) h));
+    filter: drop-shadow(
+        3px 3px oklch(from var(--primary) calc(l - 0.4) calc(c - 0.2) h)
+    );
     position: absolute;
     top: min(auto 250px);
     bottom: 3em;
@@ -68,7 +72,9 @@ svg {
 @media (min-width: 900px) {
     svg:hover {
         color: oklch(from var(--primary) calc(l + 0.1) calc(c - 0.2) h);
-        filter: drop-shadow(3px 3px oklch(from var(--primary) calc(l - 0.2) calc(c - 0.2) h));
+        filter: drop-shadow(
+            3px 3px oklch(from var(--primary) calc(l - 0.2) calc(c - 0.2) h)
+        );
     }
 }
 .btn {

@@ -1,3 +1,3 @@
 module.exports = {
-    files: ['*', './administrace/*'],
+    files: ['*', './administrace/*', './share/*'],
 };
